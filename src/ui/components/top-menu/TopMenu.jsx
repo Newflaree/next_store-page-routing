@@ -1,6 +1,11 @@
 // Next.js
 import Image from 'next/image';
 import NextLink from 'next/link';
+// React Icons
+import {
+  IoCartOutline,
+  IoSearchOutline
+} from 'react-icons/io5';
 
 
 export const TopMenu = () => {
@@ -73,11 +78,9 @@ export const TopMenu = () => {
           href='/search'
           className='mx-2'
         >
-          {/*
           <IoSearchOutline
             className='w-5 h-5'
           />
-              */}
         </NextLink>
 
         <NextLink
@@ -101,11 +104,9 @@ export const TopMenu = () => {
               3
             </span>
 
-            {/*
             <IoCartOutline
               className='w-5 h-5'
             />
-                */}
           </div>
         </NextLink>
 

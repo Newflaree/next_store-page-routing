@@ -2,7 +2,11 @@
 import { Fragment } from 'react';
 // Next
 import Head from 'next/head';
-import { TopMenu } from '@/ui/components';
+// Components
+import {
+  Footer,
+  TopMenu
+} from '@/ui/components';
 
 
 export const ShopLayout = ({
@@ -41,7 +45,7 @@ export const ShopLayout = ({
         { children }
       </main>
 
-      {/*Footer*/}
+      <Footer />
     </div>
   );
 }
