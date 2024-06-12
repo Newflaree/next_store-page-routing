@@ -14,7 +14,7 @@ export const TopMenu = () => {
       <div>
         <NextLink href='/'>
           <Image
-            src='https://res.cloudinary.com/newflare/image/upload/v1701358750/demos/muputun/xrsb6b6e5cw4butrxzun.png'
+            src='/logo.png'
             alt='mupütun'
             className='p-2 sm:p-0'
             width={ 150 }

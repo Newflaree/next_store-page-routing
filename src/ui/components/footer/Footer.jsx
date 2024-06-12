@@ -18,7 +18,7 @@ export const Footer = () => {
             Somos una empresa emergente, con equipo de profesionales de espíritu emprendedor, cuyo objetivo es modernizar la operación de la industria en CHILE, expandiendo el acceso a las nuevas tecnologías, brindando acompañamiento en la implementación de estas a quienes sean parte de este grupo humano.
           </p>
             <Image
-              src='/imgs/logo.png'
+              src='/logo.png'
               alt='mupütun'
               className='sm:p-0 m-auto'
               width={ 125 }
@@ -69,7 +69,7 @@ export const Footer = () => {
   tecnológicas de punta, a la medida de tus necesidades. convirtiéndose en tu aliado estratégico el cual puede ayudarte a afrontar de mejor manera el presente de tu negocio.
           </p>
             <Image
-              src='/imgs/logo-metta.png'
+              src='/logo-metta.png'
               alt='mettatec'
               className='sm:p-0 m-auto'
               width={ 125 }
