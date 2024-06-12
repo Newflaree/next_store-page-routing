@@ -5,7 +5,8 @@ import Head from 'next/head';
 // Components
 import {
   Footer,
-  TopMenu
+  ParticlesBackground,
+  TopMenu,
 } from '@/ui/components';
 
 
@@ -36,6 +37,7 @@ export const ShopLayout = ({
 
       <TopMenu />
       {/*Particles BG*/}
+      <ParticlesBackground />
       {/*ButtonBox*/}
 
 
