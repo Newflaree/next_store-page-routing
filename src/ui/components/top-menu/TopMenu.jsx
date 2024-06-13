@@ -66,7 +66,7 @@ export const TopMenu = () => {
         </a>
 
         <NextLink
-          href='/contact'
+          href='/contacto'
           className='m-2 p-2 rounded-md transition-all hover:bg-gray-100'
         >
           Contacto
