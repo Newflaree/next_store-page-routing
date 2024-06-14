@@ -25,7 +25,7 @@ export const HomeProductCard = ({ product }) => {
       <div className='p-4 flex flex-col'>
         <NextLink
           href='/'
-          className='hover:text-cyan-600 transition-all'
+          className='hover:text-cyan-600 transition-all text-start text-xl'
         >
           { product.name }
         </NextLink>

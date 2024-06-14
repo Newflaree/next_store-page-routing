@@ -59,8 +59,7 @@ export const HomeSliderMobile = () => {
                     <Image
                       src={ item.imgd }
                       alt={ item.title }
-                      layout="fill"
-                      objectFit="cover"
+                      fill  
                     />
                   </div>
 
@@ -101,20 +100,7 @@ export const HomeSliderMobile = () => {
                       </button>
                     </div>
                   </div>
-
-
-
-
-
-
-
-                    </div>
-
-
-
-
-
-
+                </div>
               </div>
             </SwiperSlide>
           ))
