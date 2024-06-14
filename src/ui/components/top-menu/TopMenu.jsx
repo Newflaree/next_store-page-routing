@@ -29,7 +29,7 @@ export const TopMenu = () => {
 
       <div className='hidden sm:block'>
         <NextLink
-          href='/category/gnss-x5'
+          href='/gnss-x5'
           className='m-2 p-2 rounded-md transition-all hover:bg-gray-100'
         >
           GNSS X5

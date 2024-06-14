@@ -3,10 +3,6 @@ import { Title } from '@/ui/components';
 export const HomeVideo = () => {
   return (
     <div className='mb-20'>
-      <Title
-        label='Videos destacados'
-      />
-
       <div className="flex justify-center items-center">
         <div className="w-full max-w-3xl p-4">
           <video 

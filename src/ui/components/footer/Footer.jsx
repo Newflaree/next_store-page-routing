@@ -7,11 +7,16 @@ import {
   IoLogoInstagram,
   IoLogoLinkedin,
 } from 'react-icons/io5';
+// Components
+import { Separator } from '@/ui/components';
+
 
 export const Footer = () => {
   return (
-    <footer className='sm:w-[1080px] m-auto pt-4'>
-      <div className='grid grid-cols-1 sm:grid-cols-3 gap-10 mb-10 mt-40 text-center mx-5 '>
+    <footer className='sm:w-[1080px] m-auto mt-30'>
+      <Separator />
+
+      <div className='grid grid-cols-1 sm:grid-cols-3 gap-10 mb-10 text-center mx-5 '>
         <div className='mb-5 mx-4'>
           <h2 className={ `text-xl mb-5` }>Sobre nosotros</h2>
           <p className='text-xs'>

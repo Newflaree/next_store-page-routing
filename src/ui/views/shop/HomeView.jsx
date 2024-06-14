@@ -1,23 +1,29 @@
 // Components
 import {
-  HomeProductGrid,
   HomeSlider,
   HomeSliderMobile,
-  HomeVideo
+  HomeVideo,
+  ProductGrid,
+  Title
 } from '@/ui/components';
 // Layouts
 import { ShopLayout } from '@/ui/layouts';
 
 
-export const HomeView = () => {
+export const HomeView = ({ products }) => {
   return (
     <ShopLayout
       pageTitle='Inicio'
     >
       <HomeSlider />
+
       <HomeSliderMobile />
+
+      <Title label='Videos destacados' />
       <HomeVideo />
-      <HomeProductGrid />
+
+      <Title label='Nuestros productos destacados' />
+      <ProductGrid products={ products } />
     </ShopLayout>
   );
 }

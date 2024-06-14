@@ -1,23 +1,18 @@
 // Components
 import {
-  HomeProductCard,
+  ProductCard,
   Title
 } from '@/ui/components';
 // Database
-import { homeProducts } from '@/database';
 
 
-const products = homeProducts;
-
-export const HomeProductGrid = () => {
+export const ProductGrid = ({ products }) => {
   return (
     <div className='px-5'>
-      <Title label='Nuestros productos destacados' />
-
       <div className='grid grid-cols-1 sm:grid-cols-3 gap-10 mb-20'>
         {
-          homeProducts.map( product => (
-            <HomeProductCard
+          products.map( product => (
+            <ProductCard
               key={ product.slug }
               product={ product }
             />

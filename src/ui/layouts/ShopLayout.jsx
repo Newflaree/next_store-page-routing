@@ -4,6 +4,7 @@ import Head from 'next/head';
 import {
   Footer,
   ParticlesBackground,
+  Separator,
   Sidebar,
   TopMenu,
 } from '@/ui/components';

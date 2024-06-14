@@ -5,7 +5,7 @@ import Image from 'next/image';
 import NextLink from 'next/link';
 
 
-export const HomeProductCard = ({ product }) => {
+export const ProductCard = ({ product }) => {
   const [ displayImage, setDisplayImage ] = useState( product.imgs[0].url );
 
   return (

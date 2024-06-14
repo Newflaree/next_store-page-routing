@@ -1,8 +1,14 @@
+// Database
+import { productsDB } from '@/database';
+// Views
+import { GNSSView } from '@/ui/views';
 
-const NotFoundPage = () => {
-  return (
-    <div>NotFoundPage</div>
-  );
+
+const products = productsDB.filter( product => product.cate === 'gnss-x5' );
+
+const GNSSPage = () => {
+  console.log( products );
+  return <GNSSView products={ products } />
 }
 
-export default NotFoundPage;
+export default GNSSPage;
