@@ -41,7 +41,7 @@ export const TopMenu = () => {
           Combos
         </NextLink>
         <NextLink
-          href='/category/accesories'
+          href='/accesorios'
           className='m-2 p-2 rounded-md transition-all hover:bg-gray-100'
         >
           Accesorios
