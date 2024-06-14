@@ -14,7 +14,7 @@ export const TopMenu = () => {
   const openMenu = useUIStore( state => state.openSideMenu );
 
   return (
-    <nav className='flex sm:px-5 justify-between items-center w-full bg-white shadow-lg'>
+    <nav className='flex sm:px-5 justify-between items-center w-full bg-white shadow-lg fixed z-40'>
       <div>
         <NextLink href='/'>
           <Image

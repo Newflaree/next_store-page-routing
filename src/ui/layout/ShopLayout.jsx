@@ -43,7 +43,7 @@ export const ShopLayout = ({
       {/*Sidebar*/}
       <Sidebar />
 
-      <main className='sm:px-10 sm:w-[1080px] m-auto'>
+      <main className='sm:px-10 sm:w-[1080px] m-auto pt-10'>
         { children }
       </main>
 
