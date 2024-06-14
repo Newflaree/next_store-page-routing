@@ -11,7 +11,7 @@ const products = homeProducts;
 
 export const HomeProductGrid = () => {
   return (
-    <div>
+    <div className='px-5'>
       <Title label='Nuestros productos destacados' />
 
       <div className='grid grid-cols-1 sm:grid-cols-3 gap-10 mb-20'>

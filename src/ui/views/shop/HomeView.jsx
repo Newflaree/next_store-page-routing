@@ -2,6 +2,7 @@
 import {
   HomeProductGrid,
   HomeSlider,
+  HomeSliderMobile,
   HomeVideo
 // Layouts
 } from '@/ui/components';
@@ -14,6 +15,7 @@ export const HomeView = () => {
       pageTitle='Inicio'
     >
       <HomeSlider />
+      <HomeSliderMobile />
       <HomeVideo />
       <HomeProductGrid />
     </ShopLayout>

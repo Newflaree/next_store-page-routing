@@ -32,7 +32,7 @@ export const HomeSlider = () => {
   if ( !headerInfo ) <></>
 
   return (
-    <div className='rounded-lg mb-20'>
+    <div className='rounded-lg mb-20 hidden sm:block'>
       <Swiper
         onSlideChange={ onSlideChange }
         style={{
@@ -65,7 +65,7 @@ export const HomeSlider = () => {
                 </div>
                 <div className='w-full h-full bg-black opacity-50 absolute z-20' />
                 <div className='flex justify-center items-center w-full p-5 absolute z-30'>
-                  <div className='h-full p-10 w-[50%]'>
+                  <div className='h-full p-20 w-[50%]'>
                     {
                       item.png && <Image
                         priority
