@@ -19,7 +19,7 @@ export const Sidebar = () => {
   const closeMenu = useUIStore( state => state.closeSideMenu );
 
   return (
-    <div>
+    <div className='z-50 fixed'>
       {/* Background */}
       {
         isSideMenuOpen && (
