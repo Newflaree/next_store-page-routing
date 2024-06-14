@@ -4,9 +4,9 @@ import {
   HomeSlider,
   HomeSliderMobile,
   HomeVideo
-// Layouts
 } from '@/ui/components';
-import { ShopLayout } from '@/ui';
+// Layouts
+import { ShopLayout } from '@/ui/layouts';
 
 
 export const HomeView = () => {

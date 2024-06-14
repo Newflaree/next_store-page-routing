@@ -1,7 +1,7 @@
 // Next
 import NextLink from 'next/link';
 // Layouts
-import { ShopLayout } from '@/ui/layout';
+import { ShopLayout } from '@/ui/layouts';
 
 
 export const NotFoundView = () => {

@@ -1,7 +1,7 @@
 // Componets
 import { Title } from '@/ui/components';
 // Layouts
-import { ShopLayout } from '@/ui/layout';
+import { ShopLayout } from '@/ui/layouts';
 
 
 export const ContactView = () => {

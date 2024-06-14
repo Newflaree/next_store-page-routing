@@ -35,12 +35,10 @@ export const ShopLayout = ({
       </Head>
 
       <TopMenu />
-      {/*Particles BG*/}
       <ParticlesBackground />
-      {/*ButtonBox*/}
+      {/*TODO: ButtonsBox*/}
 
 
-      {/*Sidebar*/}
       <Sidebar />
 
       <main className='sm:px-10 sm:w-[1080px] m-auto pt-10'>
