@@ -16,6 +16,7 @@ export const GNSSView = ({ products }) => {
       <div className='mt-10'>
         <Title
           label='Dispositivos GNSS X5'
+          className='text-mupu'
         />
 
         <div>

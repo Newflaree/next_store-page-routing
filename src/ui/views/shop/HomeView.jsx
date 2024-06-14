@@ -16,7 +16,6 @@ export const HomeView = ({ products }) => {
       pageTitle='Inicio'
     >
       <HomeSlider />
-
       <HomeSliderMobile />
 
       <Title label='Videos destacados' />
