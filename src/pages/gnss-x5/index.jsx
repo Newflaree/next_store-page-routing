@@ -7,7 +7,6 @@ import { GNSSView } from '@/ui/views';
 const products = productsDB.filter( product => product.cate === 'gnss-x5' );
 
 const GNSSPage = () => {
-  console.log( products );
   return <GNSSView products={ products } />
 }
 
