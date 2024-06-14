@@ -8,7 +8,6 @@ export const HomeVideo = () => {
       />
 
       <div className="flex justify-center items-center">
-        
         <div className="w-full max-w-3xl p-4">
           <video 
             controls 

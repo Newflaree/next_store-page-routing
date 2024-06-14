@@ -39,19 +39,30 @@ export const Footer = () => {
 
           <div className='w-[150px] m-auto'>
             <div className='grid grid-cols-3 gap-10'>
-              <a href='/' target='_blank'>
+              <a
+                href='https://www.facebook.com/people/M%C3%BCp%C3%BCtun/61552329926982/?mibextid=9R9pXO'
+                target='_blank'
+              >
                 <IoLogoFacebook
                   size={ 30 }
                   className='mb-2 hover:text-cyan-600 transition-all text-mupu'
                />
               </a>
-              <a href='/' target='_blank'>
+
+              <a
+                href='https://www.instagram.com/muputun/?igshid=OGQ5ZDc2ODk2ZA%3D%3D&utm_source=qr'
+                target='_blank'
+              >
                 <IoLogoInstagram
                   size={ 30 }
                   className='cursor-pointer mb-2 hover:text-cyan-600 transition-all text-mupu'
                 />
               </a>
-              <a href='/' target='_blank'>
+
+              <a
+                href='https://www.linkedin.com/in/m%C3%BCp%C3%BCtun-tecnolog%C3%ADas-0728a629b/'
+                target='_blank'
+              >
                 <IoLogoLinkedin
                   size={ 30 }
                   className='cursor-pointer mb-2 hover:text-cyan-600 transition-all text-mupu'
