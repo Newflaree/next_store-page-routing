@@ -1,11 +1,10 @@
-// React
-import { Fragment } from 'react';
 // Next
 import Head from 'next/head';
 // Components
 import {
   Footer,
   ParticlesBackground,
+  Sidebar,
   TopMenu,
 } from '@/ui/components';
 
@@ -42,6 +41,7 @@ export const ShopLayout = ({
 
 
       {/*Sidebar*/}
+      <Sidebar />
 
       <main className='px-5 sm:px-10 sm:w-[1080px] m-auto'>
         { children }

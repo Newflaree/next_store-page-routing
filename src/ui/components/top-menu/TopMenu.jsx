@@ -6,9 +6,13 @@ import {
   IoCartOutline,
   IoSearchOutline
 } from 'react-icons/io5';
+// Store
+import { useUIStore } from '@/store';
 
 
 export const TopMenu = () => {
+  const openMenu = useUIStore( state => state.openSideMenu );
+
   return (
     <nav className='flex sm:px-5 justify-between items-center w-full bg-white shadow-lg'>
       <div>
@@ -112,6 +116,7 @@ export const TopMenu = () => {
 
         <button
           className='m-2 p-2 rounded-md transition-all hover:bg-gray-100'
+          onClick={ openMenu }
         >
           Menú
         </button>
