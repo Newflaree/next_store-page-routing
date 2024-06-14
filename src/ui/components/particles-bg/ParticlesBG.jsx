@@ -19,7 +19,7 @@ export const ParticlesBackground = () => {
         options={{
           background: {
             color: {
-              value: "#fff",
+              value: 'transparent',
             },
           },
           fullScreen: {
@@ -75,10 +75,10 @@ export const ParticlesBackground = () => {
                 enable: true,
                 area: 800,
               },
-              value: 22,
+              value: 24,
             },
             opacity: {
-              value: 0.5,
+              value: 0.7,
             },
             shape: {
               type: "circle",
