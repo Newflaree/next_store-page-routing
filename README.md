@@ -2,6 +2,7 @@
 
 
 ## Vesiones
+* Node: 18
 * React: 18
 * Next: 14
 
