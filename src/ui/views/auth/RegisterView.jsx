@@ -8,10 +8,11 @@ import { AuthLayout } from '@/ui/layouts';
 
 export const RegisterView = () => {
   return (
-    <AuthLayout>
+    <AuthLayout
+      pageTitle='Registro'
+    >
+      <div className="flex flex-col min-h-screen pt-10 sm:pt-10 pb-10">
         <Title label='Crear cuenta' />
-
-        <div className="flex flex-col min-h-screen pt-10 sm:pt-10 pb-10">
 
         <div className="flex flex-col">
 

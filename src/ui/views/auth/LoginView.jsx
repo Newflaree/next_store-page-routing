@@ -9,7 +9,9 @@ import { AuthLayout } from '@/ui/layouts';
 
 export const LoginView = () => {
   return (
-    <AuthLayout>
+    <AuthLayout
+      pageTitle='Inicio de sesión'
+    >
       <div className="flex flex-col min-h-screen pt-10 sm:pt-10">
         <Title label='Ingresar' />
 
