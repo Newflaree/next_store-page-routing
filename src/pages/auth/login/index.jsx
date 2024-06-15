@@ -1,8 +1,9 @@
+// Views
+import { LoginView } from '@/ui/views';
 
-const Page = () => {
-  return (
-    <div>Page</div>
-  );
+
+const LoginPage = () => {
+  return <LoginView />
 }
 
-export default Page;
+export default LoginPage;
