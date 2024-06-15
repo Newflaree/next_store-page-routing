@@ -57,6 +57,7 @@ export const HomeSlider = () => {
               <div className={ `w-full h-full relative` }>
                 <div className={ `w-full h-full absolute` }>
                   <Image
+                    className='rounded-lg'
                     src={ item.imgm }
                     alt={ item.title }
                     height={ 700 }

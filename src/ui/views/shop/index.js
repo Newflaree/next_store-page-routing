@@ -1,3 +1,4 @@
+export * from './BlogsView';
 export * from './ContactView';
 export * from './HomeView';
 

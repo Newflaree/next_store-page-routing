@@ -1,3 +1,4 @@
+export * from './blogs';
 export * from './footer';
 export * from './home';
 export * from './particles-bg';
