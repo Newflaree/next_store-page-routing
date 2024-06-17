@@ -16,7 +16,7 @@ export const AccesoriesView = ({ products }) => {
       <div className='mt-10'>
         <Title
           label='Accesorios müputun'
-          className='text-mupu'
+          className='text-mupu text-start text-6xl font-bold'
         />
 
         <div>

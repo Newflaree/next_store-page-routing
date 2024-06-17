@@ -16,7 +16,7 @@ export const CombosView = ({ products }) => {
       <div className='mt-10'>
         <Title
           label='Combos müputun'
-          className='text-mupu'
+          className='text-mupu text-start text-6xl font-bold'
         />
 
         <div>
