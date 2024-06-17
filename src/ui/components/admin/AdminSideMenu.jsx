@@ -52,7 +52,10 @@ export const AdminSidebar = () => {
             hover:bg-gray-100 rounded transition-all
           `}
         >
-          <IoPersonOutline size={ 25 } />
+          <IoPersonOutline
+            size={ 25 }
+            className={ `transition-all ${ currentPath === '/admin' ? 'text-mupu' : '' }` }
+          />
           <span className={ `ml-3 transition-all ${ currentPath === '/admin' ? 'text-mupu' : '' }` }>
             Inicio
           </span>
@@ -69,7 +72,10 @@ export const AdminSidebar = () => {
             hover:bg-gray-100 rounded transition-all
           `}
         >
-          <IoTicketOutline size={ 25 } />
+          <IoTicketOutline
+            size={ 25 }
+            className={ `transition-all ${ currentPath === '/admin/orders' ? 'text-mupu' : '' }` }
+          />
           <span className={ `ml-3 transition-all ${ currentPath === '/admin/orders' ? 'text-mupu' : '' }` }>
             Pedidos
           </span>
@@ -86,7 +92,10 @@ export const AdminSidebar = () => {
             hover:bg-gray-100 rounded transition-all
           `}
         >
-          <IoPricetagOutline size={ 25 } />
+          <IoPricetagOutline
+            size={ 25 }
+            className={ `transition-all ${ currentPath === '/admin/products' ? 'text-mupu' : '' }` }
+          />
           <span className={ `ml-3 transition-all ${ currentPath === '/admin/products' ? 'text-mupu' : '' }` }>
             Productos
           </span>
@@ -103,7 +112,10 @@ export const AdminSidebar = () => {
             hover:bg-gray-100 rounded transition-all
           `}
         >
-          <IoCreateOutline size={ 25 } />
+          <IoCreateOutline
+            size={ 25 }
+            className={ `transition-all ${ currentPath === '/admin/blogs' ? 'text-mupu' : '' }` }
+          />
           <span className={ `ml-3 transition-all ${ currentPath === '/admin/blogs' ? 'text-mupu' : '' }` }>
             Blogs
           </span>
@@ -120,7 +132,10 @@ export const AdminSidebar = () => {
             hover:bg-gray-100 rounded transition-all
           `}
         >
-          <IoCogOutline size={ 25 } />
+          <IoCogOutline
+            size={ 25 }
+            className={ `transition-all ${ currentPath === '/admin/config' ? 'text-mupu' : '' }` }
+          />
           <span className={ `ml-3 transition-all ${ currentPath === '/admin/config' ? 'text-mupu' : '' }` }>
             Configurar Tienda
           </span>
