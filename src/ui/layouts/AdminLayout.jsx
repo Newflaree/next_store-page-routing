@@ -2,7 +2,10 @@
 import Image from 'next/image';
 import Head from 'next/head';
 // Components
-import { ParticlesBackground } from '@/ui/components';
+import {
+  AdminTopMenu,
+  ParticlesBackground
+} from '@/ui/components';
 
 
 export const AdminLayout = ({
@@ -31,13 +34,13 @@ export const AdminLayout = ({
       </Head>
 
       <div className='min-h-full'>
-        {/*TODO: AdminTopMenu*/}
+        <AdminTopMenu />
         {/*TODO: AdminSideMenu*/}
-        {/*TODO: ParticlesBackground */}
+        <ParticlesBackground />
 
-        <div className='px-0 sm:px-10 sm:w-[1080px] m-auto ml-[300px] mt-20'>
+        <main className='px-0 sm:px-10 sm:w-[1080px] m-auto ml-[300px] mt-20'>
           { children }
-        </div>
+        </main>
       </div>
     </div>
   );
