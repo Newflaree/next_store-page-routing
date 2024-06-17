@@ -42,7 +42,7 @@ export const ContactView = () => {
           <label htmlFor="email">Mensaje</label>
           <textarea
             className="px-5 py-2 border bg-gray-100 rounded mb-10"
-            rows={ 5 }
+            rows={ 4 }
           />
 
           <button

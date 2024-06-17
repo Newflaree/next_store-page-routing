@@ -27,7 +27,7 @@ export const CombosView = ({ products }) => {
 
         <div className='mt-4'>
           <SubTitle
-            label='Aprovechas nuestros combos'
+            label='Aprovecha nuestros combos'
           />
 
 
