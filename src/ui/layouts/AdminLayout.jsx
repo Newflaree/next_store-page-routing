@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Head from 'next/head';
 // Components
 import {
+  AdminSidebar,
   AdminTopMenu,
   ParticlesBackground
 } from '@/ui/components';
@@ -35,7 +36,7 @@ export const AdminLayout = ({
 
       <div className='min-h-full'>
         <AdminTopMenu />
-        {/*TODO: AdminSideMenu*/}
+        <AdminSidebar />
         <ParticlesBackground />
 
         <main className='px-0 sm:px-10 sm:w-[1080px] m-auto ml-[300px] mt-20'>
