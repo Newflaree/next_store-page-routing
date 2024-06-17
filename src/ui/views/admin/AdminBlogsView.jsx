@@ -4,10 +4,10 @@ import { Building } from '@/ui/components';
 import { AdminLayout } from '@/ui/layouts';
 
 
-export const AdminHomeView = () => {
+export const AdminBlogsView = () => {
   return (
     <AdminLayout
-      pageTitle='Dashboard Administrativo'
+      pageTitle='Blogs'
     >
       <Building />
     </AdminLayout>
