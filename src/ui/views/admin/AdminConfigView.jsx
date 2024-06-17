@@ -1,3 +1,6 @@
+// Components
+import { Building } from '@/ui/components';
+// Layouts
 import { AdminLayout } from '@/ui/layouts';
 
 
@@ -6,7 +9,7 @@ export const AdminConfigView = () => {
     <AdminLayout
       pageTitle='Configuración'
     >
-      <div>AdminConfigView</div>
+      <Building />
     </AdminLayout>
   );
 }
