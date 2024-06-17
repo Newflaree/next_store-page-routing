@@ -1,5 +1,6 @@
 export * from './admin';
 export * from './blogs';
+export * from './building';
 export * from './footer';
 export * from './home';
 export * from './particles-bg';
