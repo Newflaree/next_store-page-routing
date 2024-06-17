@@ -1,6 +1,15 @@
+// Components
+import { Building } from '@/ui/components';
+// Layouts
+import { AdminLayout } from '@/ui/layouts';
+
 
 export const AdminOrdersView = () => {
   return (
-    <div>AdminOrdersView</div>
+    <AdminLayout
+      pageTitle='Pedidos'
+    >
+      <Building />
+    </AdminLayout>
   );
 }
