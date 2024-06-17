@@ -1,6 +1,15 @@
+// Components
+import { Building } from '@/ui/components';
+// Layouts
+import { AdminLayout } from '@/ui/layouts';
+
 
 export const AdminProductsView = () => {
   return (
-    <div>AdminProductsView</div>
+    <AdminLayout
+      pageTitle='Productos'
+    >
+      <Building />
+    </AdminLayout>
   );
 }
