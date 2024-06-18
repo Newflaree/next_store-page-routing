@@ -88,7 +88,7 @@ export const TopMenu = () => {
         </NextLink>
 
         <NextLink
-          href='/cart'
+          href='/carro'
           className='mx-2'
         >
           <div className='relative'>
