@@ -5,3 +5,4 @@ export * from './EmptyView';
 export * from './HomeView';
 
 export * from './categories';
+export * from './checkout';

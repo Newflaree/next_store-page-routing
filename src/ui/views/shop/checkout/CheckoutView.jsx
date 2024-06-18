@@ -1,65 +1,62 @@
-// Next
+// Next.js
 import NextLink from 'next/link';
 import Image from 'next/image';
 // Components
 import {
   Title,
-  QuantitySelector
 } from '@/ui/components';
-// Database
-import { productsDB } from '@/database';
+// Seed
+import { productsDB} from '@/database';
 // Layouts
 import { ShopLayout } from '@/ui/layouts';
 
 
 const productsInCart = [
   productsDB[0],
-  productsDB[5],
-  productsDB[3],
+  productsDB[1],
+  productsDB[2],
 ];
 
-export const CartView = () => {
-  const itemOnCart = 3;
+export const CheckoutView = () => {
   return (
     <ShopLayout
-      pageTitle={ `Tienes ${ itemOnCart } artículos` }
+      pageTitle='Verificar pedido'
     >
       <div
         className={`
-          mt-10
           flex
           justify-center
           items-center
           mb-40
           px-10
-          sm:px-0
-          h-fit
+          sm:p -0
+          mt-10
         `}
       >
         <div className='flex flex-col w-[1000px]'>
-          <Title label='Carro de compras' />
+          <Title label='Verificar Orden' />
    
           <div className='grid grid-cols-1 sm:grid-cols-2 gap-10'>
             {/*Cart*/}
             <div className='flex flex-col mt-5'>
               <span className='text-xl'>
-                Agregar más items
+                Ajustar elementos
               </span>
               <NextLink
-                href='/'
+                href='/cart'
                 className='underline mb-5'
               >
-                Continúa comprando
+                Editar carrito
               </NextLink>
               {/*Checkout*/}
               {
                 productsInCart.map( product => (
                   <div
                     key={ product.slug }
-                    className='flex mt-5 mb-3'
+                    className='flex mt-5'
                   >
                     <Image
-                      src={ product.imgs[0].url }
+                      src={ product.imgs[ 0 ].url }
                       width={ 100 }
                       height={ 100 }
                       alt={ product.name }
@@ -72,13 +69,8 @@ export const CartView = () => {
 
                     <div>
                       <p>{ product.name }</p>
-                      <p className='text-mupu'>${ product.price }</p>
-
-                      <QuantitySelector quantity={ 3 } />
-
-                      <button className='underline mt-3'>
-                        Remover
-                      </button>
+                      <p>${ product.price } x 3</p>
+                      <p className='font-bold'>Subtotal: ${ product.price  * 3 }</p>
                     </div>
                   </div>
                 ))
@@ -86,8 +78,22 @@ export const CartView = () => {
             </div>
 
             {/*Checkout*/}
-            <div className='bg-white rounded-xl shadow-xl p-7 h-fit'>
-              <h2 className='text-2xl mb-2'>Resumen de la Orden</h2>
+            <div className='bg-white rounded-xl shadow-xl p-7'>
+              <h2 className='text-2xl mb-2 font-bold'>Dirección de Entrega</h2>
+
+              <div className='mb-10'>
+                <p className='text-xl'>Nombre de pruebas</p>
+                <p>Av. La Random</p>
+                <p>Col. Centro</p>
+                <p>Alcaldía Cuant</p>
+                <p>Ciudad Aleatoria</p>
+                <p>CP 123123</p>
+                <p>+569 12345678</p>
+              </div>
+
+              <div className='w-full h-0.5 rounded bg-gray-200 mb-10' />
+
+              <h2 className='text-2xl mb-2 font-bold'>Resumen de la Orden</h2>
 
               <div className='grid grid-cols-2'>
                 <span>No. Productos</span>
@@ -104,11 +110,17 @@ export const CartView = () => {
               </div>
 
               <div className='mt-5 mb-2 w-full'>
+                <p className='mb-5'>
+                  <span className='text-xs'>
+                    Al hacer click en 'Confirmar Orden', aceptas nuestros <a href='#' className='underline'> términos y condiciones</a> y <a href='#' className='underline'>política de privacidad</a>
+                  </span>
+                </p>
+
                 <NextLink
-                  href='/verificar/direccion'
+                  href='/orders/1234'
                   className='flex btn-primary justify-center'
                 >
-                  Checkout
+                  Confirmar Orden
                 </NextLink>
               </div>
             </div>
