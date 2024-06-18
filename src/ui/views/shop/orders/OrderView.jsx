@@ -1,26 +1,32 @@
-// Next.js
+// Next
 import NextLink from 'next/link';
 import Image from 'next/image';
+// React Icons
+import { IoCardOutline } from 'react-icons/io5';
+// Clsx
+import clsx from 'clsx';
 // Components
 import {
   Title,
+  QuantitySelector
 } from '@/ui/components';
-// Seed
-import { productsDB} from '@/database';
+// database
+import { productsDB } from '@/database';
 // Layouts
 import { ShopLayout } from '@/ui/layouts';
 
 
 const productsInCart = [
   productsDB[0],
-  productsDB[1],
-  productsDB[2],
+  productsDB[5],
+  productsDB[3],
 ];
 
-export const CheckoutView = () => {
+
+export const OrderView = () => {
   return (
     <ShopLayout
-      pageTitle='Verificar pedido'
+      pageTitle={ `Pedido: ${ 123 }` }
     >
       <div
         className={`
@@ -29,25 +35,41 @@ export const CheckoutView = () => {
           items-center
           mb-40
           px-10
-          sm:p -0
+          sm:px-0
           mt-10
         `}
       >
         <div className='flex flex-col w-[1000px]'>
-          <Title label='Verificar Orden' />
+          <Title label={ `Orden #${ 123 }` } />
    
           <div className='grid grid-cols-1 sm:grid-cols-2 gap-10'>
             {/*Cart*/}
             <div className='flex flex-col mt-5'>
-              <span className='text-xl'>
-                Ajustar elementos
-              </span>
-              <NextLink
-                href='/cart'
-                className='underline mb-5'
+              <div
+                className={
+                  clsx(`
+                    flex
+                    items-center
+                    rounded-lg
+                    py-2
+                    px-3.5
+                    text-xs
+                    font-bold
+                    text-white
+                    mb-5
+                    `,
+                    {
+                      'bg-red-500': false,
+                      'bg-green-700': true,
+                    }
+                  )
+                }
               >
-                Editar carrito
-              </NextLink>
+                <IoCardOutline size={ 30 } />
+                {/*<span className='mx-2'>Pendiente</span>*/}
+                <span className='mx-2'>Pagada</span>
+              </div>
+
               {/*Checkout*/}
               {
                 productsInCart.map( product => (
@@ -70,7 +92,7 @@ export const CheckoutView = () => {
                     <div>
                       <p>{ product.name }</p>
                       <p>${ product.price } x 3</p>
-                      <p className='font-bold'>Subtotal: ${ product.price  * 3 }</p>
+                      <p className='font-bold'>Subtotal: ${ Number(product.price) * 3 }</p>
                     </div>
                   </div>
                 ))
@@ -109,19 +131,30 @@ export const CheckoutView = () => {
                 <span className='mt-5 text-2xl text-right'>$115</span>
               </div>
 
-              <div className='mt-5 mb-2 w-full'>
-                <p className='mb-5'>
-                  <span className='text-xs'>
-                    Al hacer click en 'Confirmar Orden', aceptas nuestros <a href='#' className='underline'> términos y condiciones</a> y <a href='#' className='underline'>política de privacidad</a>
-                  </span>
-                </p>
-
-                <NextLink
-                  href='/pedidos/1234'
-                  className='flex btn-primary justify-center'
-                >
-                  Confirmar Orden
-                </NextLink>
+              <div
+                className={
+                  clsx(`
+                    mt-5
+                    flex
+                    items-center
+                    rounded-lg
+                    py-2
+                    px-3.5
+                    text-xs
+                    font-bold
+                    text-white
+                    mb-5
+                    `,
+                    {
+                      'bg-red-500': false,
+                      'bg-green-700': true,
+                    }
+                  )
+                }
+              >
+                <IoCardOutline size={ 30 } />
+                {/*<span className='mx-2'>Pendiente</span>*/}
+                <span className='mx-2'>Pagada</span>
               </div>
             </div>
           </div>
