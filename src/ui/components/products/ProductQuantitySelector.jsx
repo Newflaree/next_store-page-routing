@@ -7,7 +7,7 @@ import {
 } from 'react-icons/io5';
 
 
-export const QuantitySelector = ({ quantity }) => {
+export const ProductQuantitySelector = ({ quantity }) => {
   const [ count, setCount ] = useState( quantity );
 
   const onQuantityChanged = ( value = 1 ) => {

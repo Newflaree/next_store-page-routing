@@ -12,7 +12,9 @@ export const ProductCard = ({ product }) => {
 
   return (
     <div className='rounded-md overflow-hidden fade-in mb-10 hover:shadow-xl transition-all hover:bg-gray-100'>
-      <NextLink href='/'>
+      <NextLink
+        href={ `/productos/${ product.slug }` }
+      >
         <Image
           src={ displayImage }
           alt={ product.name }
@@ -26,7 +28,7 @@ export const ProductCard = ({ product }) => {
 
       <div className='flex flex-col p-4'>
         <NextLink
-          href='/'
+          href={ `/productos/${ product.slug }` }
           className='hover:text-cyan-600 transition-all text-start font-semibold'
         >
           { product.name }
@@ -42,7 +44,11 @@ export const ProductCard = ({ product }) => {
             )
         }
 
-        <button className='btn-primary w-full mt-4'>
+        <button
+          className='btn-primary w-full mt-4'
+          onClick={ () => console.log( product.slug ) }
+        >
+          
           Agregar al carro
         </button>
       </div>
