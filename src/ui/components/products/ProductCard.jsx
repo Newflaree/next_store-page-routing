@@ -16,7 +16,7 @@ export const ProductCard = ({ product }) => {
         <Image
           src={ displayImage }
           alt={ product.name }
-          className='w-full object-cover rounded'
+          className='w-full object-cover rounded-t'
           width={ 500 }
           height={ 500 }
           onMouseEnter={ () => setDisplayImage( product.imgs[1].url ) }
