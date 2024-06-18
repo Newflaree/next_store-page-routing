@@ -6,3 +6,4 @@ export * from './HomeView';
 
 export * from './categories';
 export * from './checkout';
+export * from './orders';

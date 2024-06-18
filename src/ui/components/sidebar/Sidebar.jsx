@@ -131,7 +131,7 @@ export const Sidebar = () => {
         {/* List Item */}
         {/* List Item */}
         <NextLink
-          href='/'
+          href='/pedidos'
           onClick={ closeMenu }
           className={`
             flex
@@ -142,7 +142,7 @@ export const Sidebar = () => {
           `}
         >
           <IoTicketOutline size={ 25 } />
-          <span className='ml-3'>Ordenes</span>
+          <span className='ml-3'>Mis pedidos</span>
         </NextLink>
         {/* List Item */}
         {/* List Item */}
@@ -158,7 +158,7 @@ export const Sidebar = () => {
           `}
         >
           <IoLogInOutline size={ 25 } />
-          <span className='ml-3'>Ingresar</span>
+          <span className='ml-3'>Cerrar sesión</span>
         </NextLink>
         {/* List Item */}
         {/*
