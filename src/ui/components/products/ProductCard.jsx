@@ -3,13 +3,15 @@ import { useState } from 'react';
 // Next
 import Image from 'next/image';
 import NextLink from 'next/link';
+// Utils
+import { currencyFormat } from '@/utils';
 
 
 export const ProductCard = ({ product }) => {
   const [ displayImage, setDisplayImage ] = useState( product.imgs[0].url );
 
   return (
-    <div className='rounded-md overflow-hidden fade-in'>
+    <div className='rounded-md overflow-hidden fade-in mb-10 hover:shadow-xl transition-all hover:bg-gray-100'>
       <NextLink href='/'>
         <Image
           src={ displayImage }
@@ -22,7 +24,7 @@ export const ProductCard = ({ product }) => {
         />
       </NextLink>
 
-      <div className='p-4 flex flex-col'>
+      <div className='flex flex-col p-4'>
         <NextLink
           href='/'
           className='hover:text-cyan-600 transition-all text-start font-semibold'
@@ -35,11 +37,16 @@ export const ProductCard = ({ product }) => {
             ? ''
             : (
               <span className='font-bold text-mupu text-end mt-3 text-lg'>
-                ${ product === 0 ? '' : product.price }
+                ${ product === 0 ? '' : currencyFormat( product.price ) }
               </span>
             )
         }
+
+        <button className='btn-primary w-full mt-4'>
+          Agregar al carro
+        </button>
       </div>
+
     </div>
   );
 }
