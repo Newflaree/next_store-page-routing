@@ -9,6 +9,7 @@ import { ShopLayout } from '@/ui/layouts';
 
 
 export const ProductView = ({ product }) => {
+  console.log( product.techSpecs );
 
   return (
     <ShopLayout
@@ -59,10 +60,12 @@ export const ProductView = ({ product }) => {
         </div>
 
         {/*Tech Specs*/}
-        <div className='w-[800px] mt-20'>
+        <div className='w-[900px] mt-20'>
           <h1 className='font-bold text-2xl'>Especificaciones Técnicas</h1>
 
-          <ProductDetailTable />
+          <ProductDetailTable
+            techSpecs={ product.techSpecs }
+          />
         </div>
       </div>
     </ShopLayout>
