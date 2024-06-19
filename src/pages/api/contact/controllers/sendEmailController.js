@@ -10,10 +10,14 @@ import {
 
 const sendEmailController = async ( req, res ) => {
   try {
-    const { message } = await sendEmailModule( req );
+    const {
+      ok,
+      statusCode,
+      message
+    } = await sendEmailModule( req );
 
-    res.status( 200 ).json({
-      ok: true,
+    res.status( statusCode ).json({
+      ok,
       message
     });
   

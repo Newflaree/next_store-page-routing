@@ -8,5 +8,7 @@ export const messages = {
   SEED_SUCCESS: 'Datos cargados con éxito',
   UNAUTHORIZED: 'Correo electrónico o contraseña incorrectos',
   USER_NOT_EXISTS: 'Usuario no encontrado',
-  INVALID_ENDPOINT: 'Endpoint not implemented'
+  INVALID_ENDPOINT: 'Endpoint not implemented',
+  SEND_EMAIL: 'Mensaje enviado con éxito',
+  SEND_EMAIL_ERROR: 'Error al enviar el mensaje',
 }
