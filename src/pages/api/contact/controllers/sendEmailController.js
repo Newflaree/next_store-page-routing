@@ -1,5 +1,7 @@
 // Modules
 import { sendEmailModule } from '../modules';
+// Utils
+import { logger } from '@/utils';
 
 
 const sendEmailController = async ( req, res ) => {
@@ -12,7 +14,7 @@ const sendEmailController = async ( req, res ) => {
     });
   
   } catch ( error ) {
-    //TODO: Implement errorHandler
+    logger.consoleErrorsHandler( error, 'sendEmailController' );
 
     res.status( 500 ).json({
       ok: false,
