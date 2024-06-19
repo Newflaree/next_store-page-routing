@@ -14,7 +14,7 @@ export const ProductTableSubitems = ({ subitems }) => {
             className='inline mb-2'
           >
             <IoRadioButtonOnOutline
-              className='text-mupu mr-2 inline'
+             className='text-mupu mr-2 inline'
               size={ 12 }
             />
 

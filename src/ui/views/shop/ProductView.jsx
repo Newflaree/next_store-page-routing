@@ -1,16 +1,17 @@
 // Components
 import {
   ProductDetailTable,
+  ProductMainAdv,
   ProductSlideshow,
   ProductQuantitySelector
 } from '@/ui/components';
 // Layouts
 import { ShopLayout } from '@/ui/layouts';
+// Utils
+import { currencyFormat } from '@/utils';
 
 
 export const ProductView = ({ product }) => {
-  console.log( product.techSpecs );
-
   return (
     <ShopLayout
       pageTitle='ProductPage'
@@ -41,7 +42,7 @@ export const ProductView = ({ product }) => {
           </h1>
 
           <p className='text-3xl mb-5 text-mupu'>
-            ${ product.price || 0 }
+            ${ currencyFormat( product.price ) }
           </p>
 
           {/* Count Selector*/}
@@ -59,13 +60,18 @@ export const ProductView = ({ product }) => {
           </p>
         </div>
 
-        {/*Tech Specs*/}
-        <div className='w-[900px] mt-20'>
-          <h1 className='font-bold text-2xl'>Especificaciones Técnicas</h1>
+        <div className='w-[1080px] mt-20'>
+          {/*Main Adv*/}
+          <ProductMainAdv mainAdv={ product.mainAdv } />
 
-          <ProductDetailTable
-            techSpecs={ product.techSpecs }
-          />
+          {/*Tech Specs*/}
+          <div className='w-[900px] mt-20'>
+            <h2 className='font-bold text-2xl'>Especificaciones Técnicas</h2>
+
+            <ProductDetailTable
+              techSpecs={ product.techSpecs }
+            />
+          </div>
         </div>
       </div>
     </ShopLayout>
