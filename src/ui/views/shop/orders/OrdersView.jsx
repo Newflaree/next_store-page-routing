@@ -47,7 +47,7 @@ export const OrdersView = () => {
 
                 </td>
                 <td className="text-sm text-gray-900 font-light px-6 ">
-                  <NextLink href="/orders/123" className="hover:underline">
+                  <NextLink href="/pedidos/123" className="hover:underline">
                     Ver orden
                   </NextLink>
                 </td>
@@ -67,7 +67,7 @@ export const OrdersView = () => {
 
                 </td>
                 <td className="text-sm text-gray-900 font-light px-6 ">
-                  <NextLink href="/orders/123" className="hover:underline">
+                  <NextLink href="/pedidos/123" className="hover:underline">
                     Ver orden
                   </NextLink>
                 </td>

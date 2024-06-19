@@ -14,6 +14,8 @@ import {
 import { productsDB } from '@/database';
 // Layouts
 import { ShopLayout } from '@/ui/layouts';
+// Utils
+import { currencyFormat } from '@/utils';
 
 
 const productsInCart = [
@@ -91,8 +93,8 @@ export const OrderView = () => {
 
                     <div>
                       <p>{ product.name }</p>
-                      <p>${ product.price } x 3</p>
-                      <p className='font-bold'>Subtotal: ${ Number(product.price) * 3 }</p>
+                      <p>${ currencyFormat(product.price) } x 3</p>
+                      <p className='font-bold'>Subtotal: ${ currencyFormat(product.price * 3) }</p>
                     </div>
                   </div>
                 ))

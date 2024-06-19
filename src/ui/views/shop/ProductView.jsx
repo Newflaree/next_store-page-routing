@@ -14,7 +14,7 @@ import { currencyFormat } from '@/utils';
 export const ProductView = ({ product }) => {
   return (
     <ShopLayout
-      pageTitle='ProductPage'
+      pageTitle={ product.name }
     >
       <div className='mt-5 mb-20 grid grid-cols-1 md:grid-cols-3 gap-3 pt-10'>
         {/*SlideShow*/}
