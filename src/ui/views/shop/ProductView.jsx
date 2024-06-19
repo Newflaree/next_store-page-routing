@@ -1,5 +1,6 @@
 // Components
 import {
+  ProductAddToCartBtn,
   ProductDetailTable,
   ProductMainAdv,
   ProductSlideshow,
@@ -45,14 +46,7 @@ export const ProductView = ({ product }) => {
             ${ currencyFormat( product.price ) }
           </p>
 
-          {/* Count Selector*/}
-          <ProductQuantitySelector
-            quantity={ 1 }
-          />
-
-          <button className='btn-primary my-5'>
-            Agregar al carrito
-          </button>
+          <ProductAddToCartBtn product={ product } />
 
           <h3 className='font-bold text-sm'>Descripción</h3>
           <p className='font-light'>
