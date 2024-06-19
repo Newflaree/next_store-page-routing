@@ -4,12 +4,14 @@ import Image from 'next/image';
 // Components
 import {
   Title,
-  QuantitySelector
+  ProductQuantitySelector
 } from '@/ui/components';
 // Database
 import { productsDB } from '@/database';
 // Layouts
 import { ShopLayout } from '@/ui/layouts';
+// Utils
+import { currencyFormat } from '@/utils';
 
 
 const productsInCart = [
@@ -20,10 +22,12 @@ const productsInCart = [
 
 export const CartView = () => {
   const itemOnCart = 3;
+
   return (
     <ShopLayout
       pageTitle={ `Tienes ${ itemOnCart } artículos` }
     >
+
       <div
         className={`
           mt-10
@@ -64,17 +68,15 @@ export const CartView = () => {
                       height={ 100 }
                       alt={ product.name }
                       className='mr-5 rounded'
-                      style={{
-                        width: '100px',
-                        height: '100px'
-                      }}
                     />
 
                     <div>
                       <p>{ product.name }</p>
-                      <p className='text-mupu'>${ product.price }</p>
+                      <p className='text-mupu'>
+                        ${ currencyFormat( product.price ) }
+                      </p>
 
-                      <QuantitySelector quantity={ 3 } />
+                      <ProductQuantitySelector quantity={ 3 } />
 
                       <button className='underline mt-3'>
                         Remover
