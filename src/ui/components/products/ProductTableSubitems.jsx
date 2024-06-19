@@ -1,25 +1,27 @@
+// React Icons
 import { IoRadioButtonOnOutline } from 'react-icons/io5';
 
 
 export const ProductTableSubitems = ({ subitems }) => {
   return (
-    <ul
+    <div
       className='flex flex-col'
     >
       {
         subitems.map( ( item ) => (
           <div
             key={ item.spec }
-            className=''
+            className='inline mb-2'
           >
             <IoRadioButtonOnOutline
-              className='text-mupu mr-2 inline-block'
-              size={ 10 }
+              className='text-mupu mr-2 inline'
+              size={ 12 }
             />
-            <li className='inline-block'>{ item.spec }</li>
+
+            <span className='inline'>{ item.spec }</span>
           </div>
         ))
       }
-    </ul>
+    </div>
   );
 }
