@@ -1,7 +1,11 @@
 // Modules
 import { sendEmailModule } from '../modules';
 // Utils
-import { logger } from '@/utils';
+import {
+  logger,
+  messages,
+  statusCodes
+} from '@/utils';
 
 
 const sendEmailController = async ( req, res ) => {
@@ -16,9 +20,9 @@ const sendEmailController = async ( req, res ) => {
   } catch ( error ) {
     logger.consoleErrorsHandler( error, 'sendEmailController' );
 
-    res.status( 500 ).json({
+    res.status( statusCodes.SERVER_ERROR ).json({
       ok: false,
-      msg: 'Something went wrong. Talking the Administrator'
+      message: messages.SERVER_ERROR
     });
   }
 }

@@ -1,5 +1,10 @@
 // Controllers
 import { sendEmailController } from './controllers';
+// Utils
+import {
+  messages,
+  statusCodes
+} from '@/utils';
 
 
 const handler = ( req, res ) => {
@@ -8,9 +13,9 @@ const handler = ( req, res ) => {
       return sendEmailController( req, res );
   
     default:
-      return res.status( 400 ).json({
+      return res.status( statusCodes.BAD_REQUEST ).json({
         ok: false,
-        message: 'Endpoint not implemented'
+        message: messages.INVALID_ENDPOINT
       });
   }
 }
