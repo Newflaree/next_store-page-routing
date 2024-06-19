@@ -59,7 +59,7 @@ export const useCartState = create(
 
         set({ cart: updatedCartProducts })
       },
-      updateProductQuantity: ( product ) => {
+      updateProductQuantity: ( product, quantity ) => {
         const { cart } = get();
 
         const updatedCartProducts = cart.map( ( item ) => {
@@ -72,7 +72,7 @@ export const useCartState = create(
 
         set({ cart: updatedCartProducts })
       },
-      removeProduct: () => {
+      removeProduct: ( product ) => {
         const { cart } = get();
 
         const updatedCartProducts = cart.filter(

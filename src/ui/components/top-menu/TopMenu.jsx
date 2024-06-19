@@ -23,8 +23,6 @@ export const TopMenu = () => {
   const totalItemsInCart = useCartState( state => state.getTotalItems() );
   const [ loaded, setLoaded ] = useState( false );
 
-  console.log( totalItemsInCart );
-
   useEffect( () => {
     setLoaded( true );
   }, [] );

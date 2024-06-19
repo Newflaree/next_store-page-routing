@@ -4,28 +4,26 @@ import Image from 'next/image';
 // Components
 import {
   Title,
-  ProductQuantitySelector
+  ProductQuantitySelector,
+  ProductsInCart
 } from '@/ui/components';
-// Database
-import { productsDB } from '@/database';
 // Layouts
 import { ShopLayout } from '@/ui/layouts';
+// Store
+import { useCartState } from '@/store';
 // Utils
 import { currencyFormat } from '@/utils';
 
 
-const productsInCart = [
-  productsDB[0],
-  productsDB[5],
-  productsDB[3],
-];
 
 export const CartView = () => {
-  const itemOnCart = 3;
+  const cart = useCartState( state => state.cart  );
+  const totalItemsInCart = useCartState( state => state.getTotalItems() );
+  const removeProduct = useCartState( state => state.removeProduct );
 
   return (
     <ShopLayout
-      pageTitle={ `Tienes ${ itemOnCart } artículos` }
+      pageTitle={ `Tienes ${ totalItemsInCart } artículos` }
     >
 
       <div
@@ -56,35 +54,8 @@ export const CartView = () => {
                 Continúa comprando
               </NextLink>
               {/*Checkout*/}
-              {
-                productsInCart.map( product => (
-                  <div
-                    key={ product.slug }
-                    className='flex mt-5 mb-3'
-                  >
-                    <Image
-                      src={ product.imgs[0].url }
-                      width={ 100 }
-                      height={ 100 }
-                      alt={ product.name }
-                      className='mr-5 rounded'
-                    />
+              <ProductsInCart />
 
-                    <div>
-                      <p>{ product.name }</p>
-                      <p className='text-mupu'>
-                        ${ currencyFormat( product.price ) }
-                      </p>
-
-                      <ProductQuantitySelector quantity={ 3 } />
-
-                      <button className='underline mt-3'>
-                        Remover
-                      </button>
-                    </div>
-                  </div>
-                ))
-              }
             </div>
 
             {/*Checkout*/}
