@@ -7,7 +7,7 @@ export const useCartState = create(
   persist(
     ( set, get ) => ({
       cart: [],
-      getTotalIcons: () => {
+      getTotalItems: () => {
         const { cart } = get();
 
         return cart.reduce(

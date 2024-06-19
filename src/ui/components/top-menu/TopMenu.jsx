@@ -1,3 +1,8 @@
+// React
+import {
+  useEffect,
+  useState
+} from 'react';
 // Next.js
 import Image from 'next/image';
 import NextLink from 'next/link';
@@ -7,11 +12,22 @@ import {
   IoSearchOutline
 } from 'react-icons/io5';
 // Store
-import { useUIStore } from '@/store';
+import {
+  useCartState,
+  useUIStore
+} from '@/store';
 
 
 export const TopMenu = () => {
   const openMenu = useUIStore( state => state.openSideMenu );
+  const totalItemsInCart = useCartState( state => state.getTotalItems() );
+  const [ loaded, setLoaded ] = useState( false );
+
+  console.log( totalItemsInCart );
+
+  useEffect( () => {
+    setLoaded( true );
+  }, [] );
 
   return (
     <nav className='flex sm:px-5 justify-between items-center w-full bg-white shadow-lg fixed z-40'>
@@ -88,25 +104,33 @@ export const TopMenu = () => {
         </NextLink>
 
         <NextLink
-          href='/carro'
+          href={
+            ( ( totalItemsInCart === 0 ) && loaded )
+              ? '/vacio'
+              : '/carro'
+          }
           className='mx-2'
         >
           <div className='relative'>
-            <span
-              className={`
-                absolute
-                text-xs
-                rounded-full
-                px-1
-                font-bold
-                -top-2
-                -right-2
-                bg-mupu
-                text-white
-              `}
-            >
-              3
-            </span>
+            {
+              ( loaded && totalItemsInCart > 0 ) && (
+                <span
+                  className={`
+                    absolute
+                    text-xs
+                    rounded-full
+                    px-1
+                    font-bold
+                    -top-2
+                    -right-2
+                    bg-mupu
+                    text-white
+                  `}
+                >
+                  { totalItemsInCart }
+                </span>
+              )
+            }
 
             <IoCartOutline
               className='w-5 h-5'
