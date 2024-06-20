@@ -6,7 +6,7 @@ import { ProductQuantitySelector } from '@/ui/components';
 import { useCartState } from '@/store';
 
 
-export const ProductAddToCartBtn = ({ product }) => {
+export const ProductAddToCartBtn = ({ product, quantitySelector = true, className = '' }) => {
   const addProductToCart = useCartState( state => state.addProductToCart );
 
   const [ quantity, setQuantity ] = useState( 1 );
@@ -20,11 +20,9 @@ export const ProductAddToCartBtn = ({ product }) => {
       slug: product.slug,
       name: product.name,
       price: product.price,
-      quantity: quantity,
+      quantity: quantity || 1,
       image: product.imgs[0].url
     }
-
-    console.log( cartProduct );
 
     addProductToCart( cartProduct );
     setPosted( false );
@@ -33,12 +31,14 @@ export const ProductAddToCartBtn = ({ product }) => {
 
   return (
     <>
-      <ProductQuantitySelector
-        quantity={ quantity }
-        onQuantityChanged={ setQuantity }
-      />
+      {
+        quantitySelector && <ProductQuantitySelector
+          quantity={ quantity }
+          onQuantityChanged={ setQuantity }
+        />
+      }
 
-      <button onClick={ addToCart } className='btn-primary my-5'>
+      <button onClick={ addToCart } className={ `my-4 btn-primary ${ className }` }>
         Agregar al carrito
       </button>
     </>

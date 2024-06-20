@@ -3,15 +3,22 @@ import { useState } from 'react';
 // Next
 import Image from 'next/image';
 import NextLink from 'next/link';
+// Components
+import { ProductAddToCartBtn } from '@/ui/components';
 // Utils
 import { currencyFormat } from '@/utils';
 
 
 export const ProductCard = ({ product }) => {
   const [ displayImage, setDisplayImage ] = useState( product.imgs[0].url );
+  const [ hovered, setHovered ] = useState( false );
 
   return (
-    <div className='rounded-md overflow-hidden fade-in mb-10 hover:shadow-xl transition-all hover:bg-gray-100'>
+    <div
+      className='rounded-md overflow-hidden fade-in mb-10 hover:shadow-xl transition-all hover:bg-gray-100'
+      onMouseEnter={ () => setHovered( true ) }
+      onMouseLeave={ () => setHovered( false ) }
+    >
       <NextLink
         href={ `/productos/${ product.slug }` }
       >
@@ -26,7 +33,7 @@ export const ProductCard = ({ product }) => {
         />
       </NextLink>
 
-      <div className='flex flex-col p-4'>
+      <div className={ `flex flex-col p-3 transition-all` }>
         <NextLink
           href={ `/productos/${ product.slug }` }
           className='hover:text-cyan-600 transition-all text-start font-semibold'
@@ -44,13 +51,11 @@ export const ProductCard = ({ product }) => {
             )
         }
 
-        <button
-          className='btn-primary w-full mt-4'
-          onClick={ () => console.log( product.slug ) }
-        >
-          
-          Agregar al carro
-        </button>
+        <ProductAddToCartBtn
+          className='my-0 mt-2'
+          product={ product }
+          quantitySelector={ false }
+        />
       </div>
 
     </div>

@@ -8,7 +8,7 @@ import { useRouter } from 'next/router';
 // Store
 import { useCartState } from '@/store';
 // Utils
-import {  } from '@/utils';
+import { currencyFormat } from '@/utils';
 
 
 export const OrderSummary = () => {
