@@ -13,7 +13,10 @@ export const ProductMainAdv = ({ mainAdv }) => {
       />
       {
         mainAdv.map( ( item ) => (
-          <div classNamw='w-full'>
+          <div
+            key={ item.primary }
+            classNamw='w-full'
+          >
             <IoRadioButtonOnOutline
               className='text-mupu mr-2 inline'
             />
