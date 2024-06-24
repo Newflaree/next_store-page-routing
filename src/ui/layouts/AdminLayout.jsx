@@ -39,7 +39,7 @@ export const AdminLayout = ({
         <AdminSidebar />
         <ParticlesBackground />
 
-        <main className='px-0 sm:px-10 sm:w-[1080px] m-auto ml-[300px] mt-20 min-h-full'>
+        <main className='px-2 sm:px-10 sm:w-[1080px] m-auto sm:ml-[300px] mt-20 min-h-full'>
           { children }
         </main>
       </div>

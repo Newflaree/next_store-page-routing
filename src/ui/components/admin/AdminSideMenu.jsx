@@ -24,6 +24,8 @@ export const AdminSidebar = () => {
       <nav
         className={
           clsx(`
+            hidden
+            sm:block
             mt-10
             fixed
             p-5
