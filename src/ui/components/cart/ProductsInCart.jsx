@@ -34,13 +34,13 @@ export const ProductsInCart = () => {
             className='flex mb-5'
           >
             {/* TODO: ProductImage*/}
-                    <Image
-                      src={ product.image }
-                      width={ 100 }
-                      height={ 100 }
-                      alt={ product.name }
-                      className='mr-5 rounded'
-                    />
+            <Image
+              src={ product.image }
+              width={ 120 }
+              height={ 100 }
+              alt={ product.name }
+              className='mr-5 rounded'
+            />
 
             <div>
               <NextLink
