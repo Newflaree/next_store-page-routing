@@ -69,7 +69,7 @@ export const AdminProductsView = () => {
                 className="bg-white border-b transition duration-300 ease-in-out hover:bg-gray-100"
               >
                 <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                  <NextLink href={`/product/${product.slug}`}>
+                  <NextLink href={`/products/${product.slug}`}>
                     {/*
                     <ProductImage
                       src={ product.ProductImage[0]?.url }
@@ -83,7 +83,7 @@ export const AdminProductsView = () => {
                 </td>
                 <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
                   <NextLink
-                    href={`/admin/product/${product.slug}`}
+                    href={`/admin/products/${product.slug}`}
                     className="hover:underline"
                   >
                     {product.name}
