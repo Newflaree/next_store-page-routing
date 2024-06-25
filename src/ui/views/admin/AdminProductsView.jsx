@@ -1,5 +1,6 @@
 // Next.js
 import NextLink from 'next/link';
+import Image from 'next/image';
 // Components
 import { Building, Title } from '@/ui/components';
 // Database
@@ -11,17 +12,16 @@ import { currencyFormat } from '@/utils';
 
 
 export const AdminProductsView = () => {
-  const products = productsDB;
+  const products = productsDB.filter( product => product.slug !== '' );
 
   return (
     <AdminLayout
-      pagetitle='productos'
+      pageTitle='Productos'
     >
       <Title label="Mantenimiento de productos" />
 
-      
       <div classname="flex justify-end">
-        <NextLink href="/admin/product/new" className="btn-primary">
+        <NextLink href="/admin/products/new" className="btn-primary">
           Nuevo producto
         </NextLink>
       </div>
@@ -52,7 +52,7 @@ export const AdminProductsView = () => {
                 scope="col"
                 className="text-sm font-medium text-gray-900 px-6 py-4 text-left"
               >
-                Género
+                Categoría
               </th>
               <th
                 scope="col"
@@ -70,15 +70,13 @@ export const AdminProductsView = () => {
               >
                 <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
                   <NextLink href={`/products/${product.slug}`}>
-                    {/*
-                    <ProductImage
-                      src={ product.ProductImage[0]?.url }
+                    <Image
+                      src={ product.imgs[0].url }
                       width={80}
                       height={80}
-                      alt={product.title}
+                      alt={ product.name }
                       className="w-20 h-20 object-cover rounded"
                     />
-                      */}
                   </NextLink>
                 </td>
                 <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">

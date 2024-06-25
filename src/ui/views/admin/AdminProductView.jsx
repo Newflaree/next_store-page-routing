@@ -5,18 +5,13 @@ import { AdminLayout } from '@/ui/layouts';
 
 
 export const AdminProductView = ({ product }) => {
-  const { slug } = product;
-
-  const currentTitle = ( slug === 'new' ) 
-    ? 'Nuevo producto'
-    : 'Editar Producto';
+  const { slug } = product.slug;
 
   return (
     <AdminLayout
-      pageTitle={ currentTitle }
+      pageTitle={ product.name }
     >
-      <Title label={ currentTitle } />
-
+      <Title label={ product.name } />
       <div>AdminProductView</div>
     </AdminLayout>
   );

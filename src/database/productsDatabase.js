@@ -802,7 +802,7 @@ export const productsDB = [
       },
     ],
     price: 0,
-    slug: 'https://cloud.mettatec.com',
+    slug: '',
     doc: []
   },
   {

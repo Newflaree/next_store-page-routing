@@ -1,12 +1,48 @@
 // Views
 import { AdminProductView } from '@/ui/views';
-// TODO: Delete Database after SSR
 // Database
-import { productsDB } from '@/database';
+import {
+  getAllProductSlugs,
+  getProductBySlug,
+} from '@/database';
 
-const AdminProductPage = () => {
-  const product = productsDB[0];
+
+const AdminProductPage = ({ product }) => {
   return <AdminProductView product={ product } />
+}
+
+export const getStatickPaths = async ( ctx ) => {
+  const productSlugs = getAllProductSlugs();
+
+  return {
+    paths: productSlugs.map( ({ slug }) => ({
+      params: {
+        slug
+      }
+    })),
+    fallback: 'blocking'
+  }
+}
+
+export const getServerSideProps = async ({ params }) => {
+  const { slug } = params;
+
+  const product = getProductBySlug( slug );
+
+  if ( !product ) {
+    return {
+      redirect: {
+        destination: '/admin',
+        permanent: false
+      }
+    }
+  }
+
+  return {
+    props: {
+      product,
+    },
+  }
 }
 
 export default AdminProductPage;
