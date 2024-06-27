@@ -1,10 +1,10 @@
 // Views
-import { AdminProductView } from '@/ui/views';
+import { AdminProductView } from '../../../../ui/views';
 // Database
 import {
   getAllProductSlugs,
   getProductBySlug,
-} from '@/database';
+} from '../../../../database';
 
 
 const AdminProductPage = ({ product }) => {

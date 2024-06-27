@@ -9,13 +9,14 @@ import clsx from 'clsx';
 import {
   Title,
   QuantitySelector
-} from '@/ui/components';
+} from '../../../components';
 // database
-import { productsDB } from '@/database';
+import { productsDB } from '../../../../database';
 // Layouts
-import { ShopLayout } from '@/ui/layouts';
+import { ShopLayout } from '../../../layouts';
 // Utils
-import { currencyFormat } from '@/utils';
+import { currencyFormat } from '../../../../utils';
+
 
 
 const productsInCart = [

@@ -1,3 +1,5 @@
+import { AdminNewproductView } from '../../../../ui/views';
+
 
 const AdminNewProductPage = () => {
   return (

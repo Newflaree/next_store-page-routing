@@ -1,7 +1,7 @@
 // Database
-import { productsDB } from '@/database';
+import { productsDB } from '../../database';
 // Views
-import { GNSSView } from '@/ui/views';
+import { GNSSView } from '../../ui/views';
 
 
 const products = productsDB.filter( product => product.cate === 'gnss-x5' );

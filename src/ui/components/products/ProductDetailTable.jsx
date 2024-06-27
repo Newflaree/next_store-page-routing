@@ -1,5 +1,5 @@
 // Components
-import { ProductTableSubitems } from '@/ui/components';
+import { ProductTableSubitems } from '../../components';
 
 
 export const ProductDetailTable = ({ techSpecs }) => {

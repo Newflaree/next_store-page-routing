@@ -1,5 +1,5 @@
 // Views
-import { EmptyView } from '@/ui/views';
+import { EmptyView } from '../../ui/views';
 
 
 const EmptyPage = () => {

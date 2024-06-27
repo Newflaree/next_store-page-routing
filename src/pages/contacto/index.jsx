@@ -1,5 +1,5 @@
 // Views
-import { ContactView } from '@/ui/views';
+import { ContactView } from '../../ui/views';
 
 
 const ContactPage = () => {

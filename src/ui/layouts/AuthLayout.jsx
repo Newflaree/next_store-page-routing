@@ -2,7 +2,7 @@
 import Image from 'next/image';
 import Head from 'next/head';
 // Components
-import { ParticlesBackground } from '@/ui/components';
+import { ParticlesBackground } from '../components';
 
 
 export const AuthLayout = ({

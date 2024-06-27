@@ -1,9 +1,9 @@
 // Next.js
 import NextLink from 'next/link';
 // Components
-import { Title } from '@/ui/components';
+import { Title } from '../../../components';
 // Layouts
-import { ShopLayout } from '@/ui/layouts';
+import { ShopLayout } from '../../../layouts';
 
 export const AddressView = () => {
   return (

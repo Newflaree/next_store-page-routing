@@ -16,7 +16,7 @@ import {
   Navigation
 } from 'swiper/modules';
 // Database
-import { headerInfo } from '@/database';
+import { headerInfo } from '../../../database';
 
 
 export const HomeSliderMobile = () => {

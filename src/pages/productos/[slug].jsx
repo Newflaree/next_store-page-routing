@@ -2,9 +2,9 @@
 import {
   getAllProductSlugs,
   getProductBySlug
-} from '@/database';
+} from '../../database';
 // Views
-import { ProductView } from '@/ui/views';
+import { ProductView } from '../../ui/views';
 
 
 const ProductPage = ({ product }) => {

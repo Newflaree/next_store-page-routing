@@ -1,7 +1,7 @@
 // Database
-import { blogsDB } from '@/database';
+import { blogsDB } from '../../database';
 // Views
-import { BlogsView } from '@/ui/views';
+import { BlogsView } from '../..//ui/views';
 
 
 const blogs = blogsDB;

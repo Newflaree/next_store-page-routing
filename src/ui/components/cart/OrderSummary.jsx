@@ -6,9 +6,9 @@ import {
 // Next
 import { useRouter } from 'next/router';
 // Store
-import { useCartState } from '@/store';
+import { useCartState } from '../../../store';
 // Utils
-import { currencyFormat } from '@/utils';
+import { currencyFormat } from '../../../utils';
 
 
 export const OrderSummary = () => {

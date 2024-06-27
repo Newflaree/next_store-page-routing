@@ -15,7 +15,7 @@ import {
 import {
   useCartState,
   useUIStore
-} from '@/store';
+} from '../../../store';
 
 
 export const TopMenu = () => {

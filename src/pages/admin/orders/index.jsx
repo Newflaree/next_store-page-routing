@@ -1,5 +1,5 @@
 // Views
-import { AdminOrdersView } from '@/ui/views';
+import { AdminOrdersView } from '../../../ui/views';
 
 
 const AdminOrdersPage = () => {

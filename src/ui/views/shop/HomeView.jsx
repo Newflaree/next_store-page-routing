@@ -5,9 +5,9 @@ import {
   HomeVideo,
   ProductGrid,
   Title
-} from '@/ui/components';
+} from '../../components';
 // Layouts
-import { ShopLayout } from '@/ui/layouts';
+import { ShopLayout } from '../../layouts';
 
 
 export const HomeView = ({ products }) => {

@@ -1,5 +1,5 @@
 // Views
-import { RegisterView } from '@/ui/views';
+import { RegisterView } from '../../../ui/views';
 
 
 const RegisterPage = () => {

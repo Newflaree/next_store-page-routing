@@ -1,5 +1,5 @@
 // Views
-import { CheckoutView } from '@/ui/views';
+import { CheckoutView } from '../../ui/views';
 
 
 const CheckoutPage = () => {

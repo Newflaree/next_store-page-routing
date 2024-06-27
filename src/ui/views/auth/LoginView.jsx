@@ -1,9 +1,9 @@
 // Next
 import NextLink from 'next/link';
 // Components
-import { Title } from '@/ui/components';
+import { Title } from '../../components';
 // Layouts
-import { AuthLayout } from '@/ui/layouts';
+import { AuthLayout } from '../../layouts';
 
 
 

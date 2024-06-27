@@ -6,13 +6,13 @@ import {
   Title,
   ProductsInCart,
   OrderSummary
-} from '@/ui/components';
+} from '../../components';
 // Layouts
-import { ShopLayout } from '@/ui/layouts';
+import { ShopLayout } from '../../layouts';
 // Store
-import { useCartState } from '@/store';
+import { useCartState } from '../../../store';
 // Utils
-import { currencyFormat } from '@/utils';
+import { currencyFormat } from '../../../utils';
 
 
 

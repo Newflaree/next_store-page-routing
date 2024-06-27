@@ -1,7 +1,7 @@
 // Components
-import { Building } from '@/ui/components';
+import { Building } from '../../components';
 // Views
-import { AdminLayout } from '@/ui/layouts';
+import { AdminLayout } from '../../layouts';
 
 
 export const AdminHomeView = () => {

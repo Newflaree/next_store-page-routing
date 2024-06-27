@@ -8,7 +8,7 @@ import {
   IoLogoLinkedin,
 } from 'react-icons/io5';
 // Components
-import { Separator } from '@/ui/components';
+import { Separator } from '../../components';
 
 
 export const Footer = () => {

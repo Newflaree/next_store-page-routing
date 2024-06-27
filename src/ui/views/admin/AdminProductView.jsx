@@ -1,12 +1,10 @@
 // Components
-import { Title } from '@/ui/components';
+import { Title } from '../../components';
 // Layouts
-import { AdminLayout } from '@/ui/layouts';
+import { AdminLayout } from '../../layouts';
 
 
 export const AdminProductView = ({ product }) => {
-  const { slug } = product.slug;
-
   return (
     <AdminLayout
       pageTitle={ product.name }

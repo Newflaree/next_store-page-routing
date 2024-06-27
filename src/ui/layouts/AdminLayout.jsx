@@ -6,7 +6,7 @@ import {
   AdminSidebar,
   AdminTopMenu,
   ParticlesBackground
-} from '@/ui/components';
+} from '../components';
 
 
 export const AdminLayout = ({

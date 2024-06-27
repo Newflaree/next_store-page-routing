@@ -3,9 +3,9 @@ import NextLink from 'next/link';
 // React Icons
 import { IoCardOutline } from 'react-icons/io5';
 // Components
-import { Title } from '@/ui/components';
+import { Title } from '../../../components';
 // Layouts
-import { ShopLayout } from '@/ui/layouts';
+import { ShopLayout } from '../../../layouts';
 
 
 export const OrdersView = () => {

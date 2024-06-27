@@ -4,9 +4,9 @@ import { useState } from 'react';
 import Image from 'next/image';
 import NextLink from 'next/link';
 // Components
-import { ProductAddToCartBtn } from '@/ui/components';
+import { ProductAddToCartBtn } from '../../components';
 // Utils
-import { currencyFormat } from '@/utils';
+import { currencyFormat } from '../../../utils';
 
 
 export const ProductCard = ({ product }) => {

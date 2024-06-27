@@ -1,5 +1,5 @@
 // Views
-import { AddressView } from '@/ui/views';
+import { AddressView } from '../../../ui/views';
 
 
 const AddressPage = () => {

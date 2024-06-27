@@ -1,9 +1,9 @@
 // React
 import { useState } from 'react';
 // Components
-import { ProductQuantitySelector } from '@/ui/components';
+import { ProductQuantitySelector } from '../../components';
 // State
-import { useCartState } from '@/store';
+import { useCartState } from '../../../store';
 
 
 export const ProductAddToCartBtn = ({ product, quantitySelector = true, className = '' }) => {

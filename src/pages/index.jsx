@@ -1,7 +1,7 @@
 // Database
-import { homeProducts } from '@/database';
+import { homeProducts } from '../database';
 // Views
-import { HomeView } from '@/ui/views';
+import { HomeView } from '../ui/views';
 
 
 const HomePage = () => {

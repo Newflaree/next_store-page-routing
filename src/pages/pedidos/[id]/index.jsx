@@ -1,5 +1,5 @@
 // Views
-import { OrderView } from '@/ui/views';
+import { OrderView } from '../../../ui/views';
 
 
 const OrderPage = () => {

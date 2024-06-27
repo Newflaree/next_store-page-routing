@@ -1,5 +1,3 @@
-import { Title } from '@/ui/components';
-
 export const HomeVideo = () => {
   return (
     <div className='mb-20'>

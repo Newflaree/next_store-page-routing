@@ -2,13 +2,13 @@
 import NextLink from 'next/link';
 import Image from 'next/image';
 // Components
-import { Building, Title } from '@/ui/components';
+import { Title } from '../../components';
 // Database
-import { productsDB } from '@/database';
+import { productsDB } from '../../../database';
 // Layouts
-import { AdminLayout } from '@/ui/layouts';
+import { AdminLayout } from '../../layouts';
 // Utils
-import { currencyFormat } from '@/utils';
+import { currencyFormat } from '../../../utils';
 
 
 export const AdminProductsView = () => {
@@ -20,7 +20,7 @@ export const AdminProductsView = () => {
     >
       <Title label="Mantenimiento de productos" />
 
-      <div classname="flex justify-end">
+      <div className="flex justify-end">
         <NextLink href="/admin/products/new" className="btn-primary">
           Nuevo producto
         </NextLink>

@@ -1,4 +1,5 @@
-import { OrdersView } from '@/ui/views';
+// Views
+import { OrdersView } from '../../ui/views';
 
 
 const OrdersPage = () => {

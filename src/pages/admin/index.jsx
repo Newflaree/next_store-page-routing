@@ -1,5 +1,5 @@
 // Views
-import { AdminHomeView } from '@/ui/views';
+import { AdminHomeView } from '../../ui/views';
 
 
 const AdminHomePage = () => {

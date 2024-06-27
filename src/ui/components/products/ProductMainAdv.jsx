@@ -1,7 +1,7 @@
 // React Icons
 import { IoRadioButtonOnOutline } from 'react-icons/io5';
 // Components
-import { Title } from '@/ui/components';
+import { Title } from '../../components';
 
 
 export const ProductMainAdv = ({ mainAdv }) => {

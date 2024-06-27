@@ -1,5 +1,5 @@
 // Views
-import { AdminConfigView } from '@/ui/views';
+import { AdminConfigView } from '../../../ui/views';
 
 
 const AdminConfigPage = () => {

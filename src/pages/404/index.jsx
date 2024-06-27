@@ -1,5 +1,5 @@
 // Views
-import { NotFoundView } from '@/ui/views';
+import { NotFoundView } from '../../ui/views';
 
 
 const NoFoundPage = () => {

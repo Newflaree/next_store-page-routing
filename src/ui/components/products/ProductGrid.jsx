@@ -1,9 +1,5 @@
 // Components
-import {
-  ProductCard,
-  Title
-} from '@/ui/components';
-// Database
+import { ProductCard } from '../../components';
 
 
 export const ProductGrid = ({ products }) => {

@@ -1,5 +1,5 @@
 // Views
-import { LoginView } from '@/ui/views';
+import { LoginView } from '../../../ui/views';
 
 
 const LoginPage = () => {

@@ -6,7 +6,7 @@ import {
   ParticlesBackground,
   Sidebar,
   TopMenu,
-} from '@/ui/components';
+} from '../components';
 
 
 export const ShopLayout = ({

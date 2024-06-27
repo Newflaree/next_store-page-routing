@@ -3,7 +3,7 @@ import NextLink from 'next/link';
 // React Icons
 import { IoCartOutline } from 'react-icons/io5';
 // Layouts
-import { ShopLayout } from '@/ui/layouts';
+import { ShopLayout } from '../../layouts';
 
 
 export const EmptyView = () => {

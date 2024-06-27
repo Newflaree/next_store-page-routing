@@ -1,5 +1,5 @@
 // Views
-import { CartView } from '@/ui/views';
+import { CartView } from '../../ui/views';
 
 
 const CartPage = () => {

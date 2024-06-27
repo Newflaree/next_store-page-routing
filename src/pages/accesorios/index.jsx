@@ -1,7 +1,7 @@
 // Database
-import { productsDB } from '@/database';
+import { productsDB } from '../../database';
 // Views
-import { AccesoriesView } from '@/ui/views';
+import { AccesoriesView } from '../../ui/views';
 
 
 const products = productsDB.filter( product => product.cate === 'acce' );

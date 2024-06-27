@@ -4,14 +4,13 @@ import clsx from 'clsx';
 import {
   IoCloseOutline,
   IoLogInOutline,
-  IoLogOutOutline,
   IoPeopleOutline,
   IoPersonOutline,
   IoTicketOutline,
   IoSearchOutline,
 } from 'react-icons/io5';
 // Store
-import { useUIStore } from '@/store';
+import { useUIStore } from '../../../store';
 
 
 export const Sidebar = () => {

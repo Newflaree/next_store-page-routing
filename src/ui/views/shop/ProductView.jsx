@@ -4,12 +4,11 @@ import {
   ProductDetailTable,
   ProductMainAdv,
   ProductSlideshow,
-  ProductQuantitySelector
-} from '@/ui/components';
+} from '../../components';
 // Layouts
-import { ShopLayout } from '@/ui/layouts';
+import { ShopLayout } from '../../layouts';
 // Utils
-import { currencyFormat } from '@/utils';
+import { currencyFormat } from '../../../utils';
 
 
 export const ProductView = ({ product }) => {

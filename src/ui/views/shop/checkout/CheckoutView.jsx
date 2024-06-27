@@ -4,11 +4,11 @@ import Image from 'next/image';
 // Components
 import {
   Title,
-} from '@/ui/components';
+} from '../../../components';
 // Seed
-import { productsDB} from '@/database';
+import { productsDB} from '../../../../database';
 // Layouts
-import { ShopLayout } from '@/ui/layouts';
+import { ShopLayout } from '../../../layouts';
 
 
 const productsInCart = [
