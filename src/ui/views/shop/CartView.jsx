@@ -1,6 +1,5 @@
 // Next
 import NextLink from 'next/link';
-import Image from 'next/image';
 // Components
 import {
   Title,
@@ -11,15 +10,11 @@ import {
 import { ShopLayout } from '../../layouts';
 // Store
 import { useCartState } from '../../../store';
-// Utils
-import { currencyFormat } from '../../../utils';
 
 
 
 export const CartView = () => {
-  const cart = useCartState( state => state.cart  );
   const totalItemsInCart = useCartState( state => state.getTotalItems() );
-  const removeProduct = useCartState( state => state.removeProduct );
 
   return (
     <ShopLayout

@@ -9,7 +9,7 @@ export const AdminConfigView = () => {
     <AdminLayout
       pageTitle='Configuración'
     >
-      <div className='h-[700px]'>
+      <div className='h-[800px]'>
         <Title
           label='Configuración de la tienda'
         />

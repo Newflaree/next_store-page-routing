@@ -4,7 +4,7 @@ import { IoHammerOutline } from 'react-icons/io5';
 
 export const Building = () => {
   return (
-    <div className='flex justify-center items-center h-[900px]'>
+    <div className='flex justify-center items-center h-[800px]'>
       <IoHammerOutline
         size={ 80 }
         className='mx-5 text-mupu'
