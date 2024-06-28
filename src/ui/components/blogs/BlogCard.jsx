@@ -1,5 +1,6 @@
 // Next
 import Image from 'next/image';
+import NextLink from 'next/link';
 
 
 export const BlogCard = ({ blog }) => {
@@ -24,9 +25,12 @@ export const BlogCard = ({ blog }) => {
                 { blog.desc }
               </p>
 
-              <a className="text-white bg-mupu hover:bg-cyan-600 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-2 text-center inline-flex items-center" href="#">
+              <NextLink
+                className='text-white bg-mupu hover:bg-cyan-600 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-2 text-center inline-flex items-center'
+                href={ `/blogs/${ blog.slug }` }
+              >
                 Leer más
-              </a>
+              </NextLink>
           </div>
       </div>
     </div>

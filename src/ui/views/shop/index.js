@@ -1,4 +1,5 @@
 export * from './BlogsView';
+export * from './BlogBySlugView';
 export * from './CartView';
 export * from './ContactView';
 export * from './EmptyView';

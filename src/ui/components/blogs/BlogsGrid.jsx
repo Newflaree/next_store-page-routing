@@ -8,7 +8,7 @@ export const BlogsGrid = ({ blogs = [] }) => {
       {
         blogs.map( blog => (
           <BlogCard
-            key={ blog.slug }
+            key={ blog.id }
             blog={ blog }
           />
         ))
