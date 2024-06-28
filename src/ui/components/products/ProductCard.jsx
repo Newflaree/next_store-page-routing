@@ -5,6 +5,8 @@ import Image from 'next/image';
 import NextLink from 'next/link';
 // Components
 import { ProductAddToCartBtn } from '../../components';
+// Store
+import { useShopStore } from '../../../store';
 // Utils
 import { currencyFormat } from '../../../utils';
 
@@ -12,6 +14,7 @@ import { currencyFormat } from '../../../utils';
 export const ProductCard = ({ product }) => {
   const [ displayImage, setDisplayImage ] = useState( product.imgs[0].url );
   const [ hovered, setHovered ] = useState( false );
+  const isPricesHidden = useShopStore( state => state.isPricesHidden );
 
   return (
     <div
@@ -42,11 +45,11 @@ export const ProductCard = ({ product }) => {
         </NextLink>
 
         {
-          product.price <= 0
+          isPricesHidden
             ? ''
             : (
               <span className='font-bold text-mupu text-end mt-3 text-lg'>
-                ${ product === 0 ? '' : currencyFormat( product.price ) }
+                { product.price === 0 ? '' : `$${ currencyFormat( product.price ) }` }
               </span>
             )
         }

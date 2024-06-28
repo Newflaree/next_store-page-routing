@@ -17,7 +17,7 @@ export const ProductDetailTable = ({ techSpecs }) => {
       <tbody className='bg-white'>
         {
           techSpecs.map( ( item ) => (
-            <tr className='border'>
+            <tr className='border' key={ item.primary }>
               <td className='pl-4 font-bold border'>{ item.primary }</td>
               <td className=' flex flex-col p-4 '>
                 <ProductTableSubitems subitems={ item.secondary } />
