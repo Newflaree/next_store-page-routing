@@ -19,22 +19,26 @@ export const RegisterView = () => {
           <label htmlFor="email">Nombre de usuario</label>
           <input
             className="px-5 py-2 border bg-gray-200 rounded mb-5"
-            type="text" />
+            type="text"
+          />
 
           <label htmlFor="email">Correo electrónico</label>
           <input
             className="px-5 py-2 border bg-gray-200 rounded mb-5"
-            type="email" />
+            type="email"
+          />
 
           <label htmlFor="email">Contraseña</label>
           <input
             className="px-5 py-2 border bg-gray-200 rounded mb-5"
-            type="password" />
+            type="password"
+          />
 
           <label htmlFor="email">Repetir contraseña</label>
           <input
             className="px-5 py-2 border bg-gray-200 rounded mb-5"
-            type="password" />
+            type="password"
+          />
 
           <button
             className="btn-primary"
@@ -52,7 +56,8 @@ export const RegisterView = () => {
 
           <NextLink
             href="/auth/login" 
-            className="btn-secondary text-center">
+            className="btn-secondary text-center"
+          >
             Ya tengo una cuenta
           </NextLink>
         </div>
