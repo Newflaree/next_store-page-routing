@@ -21,8 +21,6 @@ export const authOptions = {
         },
       },
       async authorize( credentials ) {
-        //return { name: 'Hector', email: 'test3@email.com', role: 'CLIENT_ROLE'  };
-        //TODO: Validar contra base de datos
         return await dbUsers.checkUserEmailPassword(
           credentials.email,
           credentials.password
@@ -34,13 +32,6 @@ export const authOptions = {
       clientSecret: process.env.GITHUB_SECRET,
     }),
   ],
-  /*
-  // JWT: Deprecated
-  jwt: {
-    secret: process.env.JWT_SECRET_SEED || ''
-  },
-  */
-  // Custom Pages
   pages: {
     signIn: '/auth/login',
     newUser: '/auth/register'
@@ -72,8 +63,8 @@ export const authOptions = {
 
       return token;
     },
-
     async session({ session, token, user }) {
+      console.log({ user });
       session.accessToken = token.accessToken;
       session.user = token.user;
 

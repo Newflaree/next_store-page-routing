@@ -1,4 +1,5 @@
 export * from './blogsDatabase';
+export * from './dbUsers';
 export * from './headerInfo';
 export * from './homeProducts';
 export * from './productMethods';
