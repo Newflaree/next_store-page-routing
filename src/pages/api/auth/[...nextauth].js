@@ -1,6 +1,9 @@
 // Next Auth
 import NextAuth from 'next-auth';
 import Credentials from 'next-auth/providers/credentials';
+import GithubProvider from 'next-auth/providers/github';
+// Database
+import { dbUsers } from '../../../database';
 
 
 export const authOptions = {

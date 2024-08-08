@@ -24,8 +24,6 @@ const setUpEmailTemplateService = async ( req ) => {
       .replace( '{{subject}}', subject )
       .replace( '{{message}}', message )
 
-    console.log( template );
-
     return {
       template
     }

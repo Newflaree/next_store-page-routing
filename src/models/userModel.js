@@ -1,7 +1,7 @@
-// Mongoose
 import {
   Schema,
   model,
+  models
 } from 'mongoose';
 
 
@@ -33,10 +33,7 @@ const UserSchema = new Schema({
   timestamps: true
 });
 
-UserSchema.methods.toJSON = function() {
-  const { __v, password, ...user } = this.toObject();
-  return user;
-}
+const User = models?.User || model( 'User', UserSchema );
 
 
-export default model( 'User', UserSchema );
+export default User;

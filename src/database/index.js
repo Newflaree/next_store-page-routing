@@ -1,5 +1,4 @@
 export * from './blogsDatabase';
-export * from './dbUsers';
 export * from './headerInfo';
 export * from './homeProducts';
 export * from './productMethods';
@@ -7,3 +6,4 @@ export * from './productsDatabase';
 export * from './sidebarData';
 
 export * as db from './db';
+export * as dbUsers from './dbUsers';
