@@ -14,6 +14,7 @@ export const LoginView = ({
   query,
   register,
   showError,
+  signIn,
   validation,
 }) => {
   return (
@@ -79,11 +80,26 @@ export const LoginView = ({
 
             <button
               type='submit'
-              className="btn-primary mt-5"
+              className="btn-primary mt-5 mb-5"
             >
               Iniciar Sesión
             </button>
 
+            {
+              Object.values( providers ).map( provider => {
+                if ( provider.id === 'credentials' ) return null;
+
+                return (
+                  <button
+                    key={ provider.id }
+                    className="w-full border border-cyan-600 text-cyan-600 py-2 rounded-md hover:bg-cyan-700 hover:text-white my-1 transition-all"
+                    onClick={() => signIn(provider.id)}
+                  >
+                    { provider.name }
+                  </button>
+                )
+              })
+            }
 
             <div className="flex items-center my-5">
               <div className="flex-1 border-t border-gray-500"></div>
@@ -97,7 +113,6 @@ export const LoginView = ({
             >
               Crear una nueva cuenta
             </NextLink>
-
           </div>
         </div>
       </form>

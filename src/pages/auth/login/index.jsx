@@ -41,8 +41,12 @@ const LoginPage = () => {
   return <LoginView
     errors={ errors }
     handleSubmit={ handleSubmit }
+    onLoginUser={ onLoginUser }
     register={ register }
+    showError={ showError }
+    signIn={ signIn }
     validation={ validation }
+    providers={ providers }
   />
 }
 
