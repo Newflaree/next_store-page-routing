@@ -1,10 +1,11 @@
 // Controllers
+import { authRegisterController } from './controllers';
 
 
 export default function handler( req, res ) {
   switch ( req.method ) {
-    case 'GET':
-      return method( req, res );
+    case 'POST':
+      return authRegisterController( req, res );
   
     default:
       return res.status( 400 ).json({
