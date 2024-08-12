@@ -1,3 +1,10 @@
+// Utils
+import {
+  messages,
+  statusCodes
+} from './';
+
+
 export const isValidEmail = ( email ) => {
   const match = String( email )
     .toLowerCase()
@@ -11,5 +18,31 @@ export const isValidEmail = ( email ) => {
 export const isEmail = ( email ) => {
   return isValidEmail( email )
     ? undefined
-    : 'El correo no es válido'
+    : messages.INVALID_EMAIL
+}
+
+export const validateReqBody = ({
+  email = '',
+  password = '',
+  name = ''
+}) => {
+  if ( isValidEmail( email ) ) return {
+    statusCode: statusCodes.BAD_REQUEST,
+    ok: false,
+    message: messages.INVALID_EMAIL
+  }
+
+  if ( password.length < 6 ) return {
+    statusCode: statusCodes.BAD_REQUEST,
+    ok: false,
+    message: messages.INVALID_PASS
+  }
+
+  if ( name.length < 3 ) return {
+    statusCode: statusCodes.BAD_REQUEST,
+    ok: false,
+    message: messages.INVALID_NAME
+  }
+
+  return null;
 }

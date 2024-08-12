@@ -1,5 +1,8 @@
 export const messages = {
   EMAIL_EXISTS: 'Correo electrónico ya registrado',
+  INVALID_EMAIL: 'El correo electrónico no tiene un formato válido',
+  INVALID_NAME: 'El nombre debe tener al menos 3 caracteres',
+  INVALID_PASS: 'La contraseña debe tener al menos 6 caracteres',
   INVALID_REQUEST: 'No te puedes eliminar a ti mismo',
   INVALID_STATUS: 'Estado inválido',
   INVALID_TOKEN: 'Token no válido',
