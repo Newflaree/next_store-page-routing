@@ -23,12 +23,16 @@ const LoginPage = () => {
   const { replace, query } = useRouter();
   const [ showError, setShowError ] = useState( false );
   const [ providers, setProviders ] = useState({});
-  const { register, handleSubmit, watch, formState: { errors } } = useForm();
+  const {
+    register,
+    handleSubmit,
+    watch,
+    formState: { errors }
+  } = useForm();
 
   useEffect( () => {
     getProviders()
       .then( prov => {
-        console.log({ prov });
         setProviders( prov )
       });
   }, [] );

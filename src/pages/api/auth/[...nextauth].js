@@ -33,15 +33,20 @@ export const authOptions = {
       }
     }),
     GoogleProvider({
-     clientId: process.env.GITHUB_ID,
-      clientSecret: process.env.GITHUB_SECRET,
+      clientId: process.env.GOOGLE_CLIENT_ID,
+      clientSecret: process.env.GOOGLE_CLIENT_SECRET,
+      authorization: {
+        params: {
+          redirect_uri: `${ process.env.NEXTAUTH_URL }/api/auth/callback/google`
+        }
+      }
     }),
     FacebookProvider({
-     clientId: process.env.GITHUB_ID,
+      clientId: process.env.GITHUB_ID,
       clientSecret: process.env.GITHUB_SECRET,
     }),
     AppleProvider({
-     clientId: process.env.GITHUB_ID,
+      clientId: process.env.GITHUB_ID,
       clientSecret: process.env.GITHUB_SECRET,
     }),
   ],
