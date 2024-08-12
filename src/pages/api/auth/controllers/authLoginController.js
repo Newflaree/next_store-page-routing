@@ -1,3 +1,5 @@
+// Modules
+import { authLoginModule } from '../modules';
 // Utils
 import {
   logger,
@@ -22,9 +24,15 @@ const authLoginController = async (
   res
 ) => {
   try {
-    res.status( 200 ).json({
-      ok: true,
-      message: 'authLoginController'
+    const {
+      message,
+      ok,
+      statusCode
+    } = await authLoginModule( req );
+
+    res.status( statusCode ).json({
+      ok,
+      message
     });
   
   } catch ( error ) {

@@ -1,3 +1,5 @@
+// Modules
+import { authRegisterModule } from '../modules';
 // Utils
 import {
   logger,
@@ -22,9 +24,15 @@ const authRegisterController = async (
   res
 ) => {
   try {
-    res.status( 200 ).json({
-      ok: true,
-      message: 'authRegisterController'
+    const {
+      message,
+      ok,
+      statusCode
+    } = await authRegisterModule( req );
+
+    res.status( statusCode ).json({
+      ok,
+      message
     });
   
   } catch ( error ) {

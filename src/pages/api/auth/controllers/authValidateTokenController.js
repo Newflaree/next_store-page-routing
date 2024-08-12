@@ -1,4 +1,6 @@
-//
+// Modules
+import { authValidateTokenModule } from '../modules';
+// Utils
 import {
   logger,
   messages,
@@ -19,9 +21,15 @@ import {
  */
 const authValidateTokenController = async ( req, res ) => {
   try {
-    res.status( 200 ).json({
-      ok: true,
-      message: 'authValidateTokenController'
+    const {
+      message,
+      ok,
+      statusCode
+    } = await authValidateTokenModule( req );
+
+    res.status( statusCode ).json({
+      ok,
+      message
     });
   
   } catch ( error ) {
