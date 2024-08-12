@@ -92,8 +92,8 @@ export const LoginView = ({
                 return (
                   <button
                     key={ provider.id }
-                    className="w-full border border-cyan-600 text-cyan-600 py-2 rounded-md hover:bg-cyan-700 hover:text-white my-1 transition-all"
                     onClick={() => signIn(provider.id)}
+                    className={ `w-full border bg-gray-100 border-cyan-600 text-cyan-600 py-2 rounded-md hover:bg-cyan-700 hover:text-white my-1 transition-all` }
                   >
                     { provider.name }
                   </button>

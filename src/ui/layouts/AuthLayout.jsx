@@ -1,6 +1,7 @@
 // Next
-import Image from 'next/image';
 import Head from 'next/head';
+import Image from 'next/image';
+import NextLink from 'next/link';
 // Components
 import { ParticlesBackground } from '../components';
 
@@ -37,13 +38,15 @@ export const AuthLayout = ({
           <div
             className='flex justify-center mb-5'
           >
-            <Image
-              src='/logo.png'
-              alt='mupütun'
-              className='p-5 sm:p-0 mt-5'
-              width={ 200 }
-              height={ 100 }
-            />
+            <NextLink href='/'>
+              <Image
+                src='/logo.png'
+                alt='mupütun'
+                className='p-5 sm:p-0 mt-5'
+                width={ 200 }
+                height={ 100 }
+              />
+            </NextLink>
           </div>
 
           { children }
