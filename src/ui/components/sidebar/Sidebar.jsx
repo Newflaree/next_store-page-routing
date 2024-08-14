@@ -4,16 +4,21 @@ import clsx from 'clsx';
 import {
   IoCloseOutline,
   IoLogInOutline,
+  IoLogOutOutline,
   IoPeopleOutline,
   IoPersonOutline,
   IoTicketOutline,
   IoSearchOutline,
 } from 'react-icons/io5';
 // Store
-import { useUIStore } from '../../../store';
+import {
+  useUIStore,
+  useAuthStore
+} from '../../../store';
 
 
 export const Sidebar = () => {
+  const logoutUser = useAuthStore( state => state.logoutUser );
   const isSideMenuOpen = useUIStore( state => state.isSideMenuOpen );
   const closeMenu = useUIStore( state => state.closeSideMenu );
 
@@ -145,6 +150,20 @@ export const Sidebar = () => {
         </NextLink>
         {/* List Item */}
         {/* List Item */}
+        <button
+          onClick={ logoutUser }
+          className={`
+            flex
+            items-center
+            mt-5
+            p-2
+            hover:bg-gray-100 rounded transition-all
+          `}
+        >
+          <IoLogOutOutline size={ 25 } />
+          <span className='ml-3'>Cerrar sesión</span>
+        </button>
+        {/* List Item */}
         <NextLink
           href='/auth/login'
           onClick={ closeMenu }
@@ -157,7 +176,7 @@ export const Sidebar = () => {
           `}
         >
           <IoLogInOutline size={ 25 } />
-          <span className='ml-3'>Cerrar sesión</span>
+          <span className='ml-3'>Iniciar sesión</span>
         </NextLink>
         {/* List Item */}
         {/*

@@ -10,6 +10,7 @@ import { dbUsers } from '../../../database';
 
 export const authOptions = {
   // Configure one or more authentication providers
+  secret: process.env.NEXTAUTH_SECRET,
   providers: [
     Credentials({
       name: 'Custom Login',
